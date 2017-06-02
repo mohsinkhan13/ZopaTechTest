@@ -44,16 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileReader\FileReaderFixture.cs" />
+    <Compile Include="Calculator\CompundInterestCalculatorFixture.cs" />
+    <Compile Include="FileReader\CsvFileReaderFixture.cs" />
+    <Compile Include="ProductFinder\LowestRateFinderFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <AdditionalFiles Include="TestFiles\TestFile.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ZopaTechTest.Calculator\ZopaTechTest.Calculator.csproj">
+      <Project>{3C4279D0-7637-4132-865E-9FF9B004F322}</Project>
+      <Name>ZopaTechTest.Calculator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZopaTechTest.FileReader\ZopaTechTest.FileReader.csproj">
       <Project>{47aa5c23-662b-46da-9547-a76d1c830c9f}</Project>
       <Name>ZopaTechTest.FileReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZopaTechTest.Models\ZopaTechTest.Models.csproj">
+      <Project>{C1E25491-50EB-4481-9AFB-DCA1B94579B4}</Project>
+      <Name>ZopaTechTest.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZopaTechTest.ProductFinder\ZopaTechTest.ProductFinder.csproj">
+      <Project>{27F84786-DEFE-4BE5-8167-45A0F2A1D198}</Project>
+      <Name>ZopaTechTest.ProductFinder</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

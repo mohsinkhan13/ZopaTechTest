@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47AA5C23-662B-46DA-9547-A76D1C830C9F}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{A90DDB34-39C0-46CF-922E-FAB281308E55}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ZopaTechTest.FileReader</RootNamespace>
-    <AssemblyName>ZopaTechTest.FileReader</AssemblyName>
+    <RootNamespace>ZopaTechTest.ConsoleApp</RootNamespace>
+    <AssemblyName>ZopaTechTest.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,13 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CsvFileReader.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZopaTechTest.Calculator\ZopaTechTest.Calculator.csproj">
+      <Project>{3c4279d0-7637-4132-865e-9ff9b004f322}</Project>
+      <Name>ZopaTechTest.Calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZopaTechTest.FileReader\ZopaTechTest.FileReader.csproj">
+      <Project>{47AA5C23-662B-46DA-9547-A76D1C830C9F}</Project>
+      <Name>ZopaTechTest.FileReader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZopaTechTest.Models\ZopaTechTest.Models.csproj">
-      <Project>{C1E25491-50EB-4481-9AFB-DCA1B94579B4}</Project>
+      <Project>{c1e25491-50eb-4481-9afb-dca1b94579b4}</Project>
       <Name>ZopaTechTest.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZopaTechTest.ProductFinder\ZopaTechTest.ProductFinder.csproj">
+      <Project>{27f84786-defe-4be5-8167-45a0f2a1d198}</Project>
+      <Name>ZopaTechTest.ProductFinder</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
