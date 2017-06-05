@@ -36,7 +36,7 @@ namespace ZopaTechTest.ProductFinder
                 product.MonthlyRepayment = _compundInterestCalculator.CalculateMonthlyPayment(
                     amountRequested, bestRate.Rate, product.Term);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new Exception("Sorry, it is not possible to provide a quote at this time.");
             }
